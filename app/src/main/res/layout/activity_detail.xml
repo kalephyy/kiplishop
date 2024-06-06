@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Detail">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Headset"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp. 150.000"
+                android:textSize="18sp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rasakan kenyamanan maksimal dengan headset yang dirancang untuk segala aktivitas. Dibuat dari bahan yang ringan dan tidak panas, menjamin kenyamanan sepanjang hari."
+                android:textSize="14sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tv_product_features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keunggulan:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tv_product_features_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-Kualitas Suara yang Jernih: Headset berkualitas menawarkan suara yang jernih dan mendetail, baik untuk musik, panggilan telepon, atau gaming.
+
+Kenyamanan: Desain ergonomis dengan bantalan telinga yang lembut dan headband yang dapat disesuaikan memastikan headset nyaman digunakan dalam waktu lama.
+
+Noise Cancelling: Fitur ini membantu mengurangi atau menghilangkan kebisingan dari lingkungan sekitar, memungkinkan Anda fokus pada suara yang dihasilkan oleh headset"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total : Rp. 150.000"
+                android:textAlignment="textEnd"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/decrease"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/increase"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:text="+" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"
+                android:text="Masukkan Keranjang"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
